@@ -13,6 +13,9 @@ export class MovieComponent implements OnInit {
   url = '';
   movies: any;
   movie: any;
+  name:any;
+  rating:any;
+  review:any;
 
   constructor(private route:ActivatedRoute, private http:HttpClient) { }
 
@@ -41,6 +44,12 @@ export class MovieComponent implements OnInit {
         this.movie = this.movies[index]
       }
     })
+  }
+
+  onSubmit(){
+    console.log(this.name)
+    console.log(this.rating)
+    console.log(this.review)
   }
 
 }
